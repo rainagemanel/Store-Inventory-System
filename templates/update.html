@@ -12,86 +12,69 @@
 <form action='' method = "POST">
 <table class="table">
     <tr>
-        <td>First Name</td>
-        <td><input type = "text" name = "first_name" value="{{student.first_name}}" class="form-control" /></td>
+        <td>Department Name</td>
+        <td><input type = "text" name = "dep_name" value="{{uniform.dep_name}}" class="form-control" /></td>
     </tr>
     <tr>
-        <td>Last Name</td>
-        <td><input type = "text" name = "last_name" class="form-control" value="{{student.last_name}}" /></td>
+        <td>Course Name</td>
+        <td><input type = "text" name = "course_name" class="form-control" value="{{uniform.course_name}}" /></td>
     </tr>
-
     <tr>
-        <td>Email</td>
-        <td><input type = "email" name = "email" class="form-control" value="{{student.email}}" /></td>
-    </tr>
-
-    <tr>
-        <td>Password</td>
-        <td><input type = "password" name = "password" class="form-control" value="{{student.password}}" /></td>
-    </tr>
-
-    <tr>
-        <td>Gender</td>
+        <td>Type</td>
         <td>
-          Male: <input type = "radio" name = "gender"  value="male"
-          {% if  student.gender=='male'  %}
-             checked
-          {% endif  %}
-          />
-         Female: <input type = "radio" name = "gender"  value="female"
-         {% if  student.gender=='female'  %}
-         checked
-      {% endif  %}
-         />
-        </td>
-    </tr>
-
-    <tr>
-        <td>Hobbies</td>
-        <td>
-
-            Cricket : <input type="checkbox" name="hobbies"  value="cricket" 
-            {% if 'cricket' in student.hobbies %}
-               checked
-            {% endif %}
-            >
-            Movies : <input type="checkbox"  name="hobbies"  value="movies"
-            {% if 'movies' in student.hobbies %}
-                checked
-            {% endif %}
-            
-            >
-            TV : <input type="checkbox"  name="hobbies"  value="tv"
-            {% if 'tv' in student.hobbies %}
-               checked
-            {% endif %}
-            >
-           
-        </td>
-    </tr>
-
-
-
-    <tr>
-        <td>Country</td>
-        <td>
-        <select name="country" class="form-control">
-            <option value="india"
-            {% if 'india' in student.country %}
+        <select name="sizes" class="form-control">
+            <option value="a"
+            {% if 'a' in uniform.type %}
             selected
            {% endif %}
-            >India</option>
-            <option value="usa"
-            {% if 'usa' in student.country %}
+            >Type A</option>
+            <option value="b"
+            {% if 'b' in uniform.type %}
               selected
            {% endif %}
-            >USA</option>
-            <option value="australia"
-            
-            {% if 'australia' in student.country %}
+            >Type B</option>
+            <option value="c"
+            {% if 'c' in uniform.type %}
             selected
           {% endif %}
-            >Australia</option>
+            >Type C</option>
+            <option value="d"
+            {% if 'd' in uniform.type %}
+            selected
+          {% endif %}
+            >Type D</option>
+         </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Stock</td>
+        <td><input type = "number" name = "stock" class="form-control" value="{{uniform.stock}}" /></td>
+    </tr>
+
+    <tr>
+        <td>Sizes</td>
+        <td>
+        <select name="sizes" class="form-control">
+            <option value="small"
+            {% if 'small' in uniform.sizes %}
+            selected
+           {% endif %}
+            >Small</option>
+            <option value="medium"
+            {% if 'medium' in uniform.sizes %}
+              selected
+           {% endif %}
+            >Medium</option>
+            <option value="large"
+            {% if 'large' in uniform.sizes %}
+            selected
+          {% endif %}
+            >Large</option>
+            <option value="extralarge"
+            {% if 'extralarge' in uniform.sizes %}
+            selected
+          {% endif %}
+            >Extra Large</option>
          </select>
         </td>
     </tr>

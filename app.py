@@ -17,12 +17,6 @@ def create():
         return render_template('createpage.html')
  
     if request.method == 'POST':
-
-        hobby = request.form.getlist('hobbies')
-        #hobbies = ','.join(map(str, hobby))
-        hobbies=",".join(map(str, hobby))
-
-
         dep_name = request.form['dep_name']
         course_name = request.form['course_name']
         type = request.form['type']
