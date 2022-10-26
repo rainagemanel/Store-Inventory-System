@@ -22,6 +22,7 @@ def create():
         type = request.form['type']
         stock = request.form['stock']
         sizes = request.form['sizes']
+        
         uniforms = UniformModel(
             dep_name=dep_name,
             course_name=course_name,
@@ -50,13 +51,13 @@ def RetrieveSUniform(id):
  
 @app.route('/<int:id>/edit',methods = ['GET','POST'])
 def update(id):
-    uniform = UniformModel.query.filter_by(id=id).first()
-
-    if request.method == 'POST':
+    if request.method == 'POST'
+        
         if uniform:
             db.session.delete(uniform)
             db.session.commit()
-   
+            
+            
         dep_name = request.form['dep_name']
         course_name = request.form['course_name']
         type = request.form['type']
@@ -74,8 +75,7 @@ def update(id):
         db.session.add(uniform)
         db.session.commit()
         return redirect('/')
-        return f"Uniform with id = {id} Does not exist"
- 
+
     return render_template('update.html', uniform = uniform)
  
  
@@ -87,7 +87,7 @@ def delete(id):
             db.session.delete(uniforms)
             db.session.commit()
             return redirect('/')
-            abort(404)
+            
      
     return render_template('delete.html')
  
