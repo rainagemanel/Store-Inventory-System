@@ -40,24 +40,15 @@ def RetrieveList():
     uniforms = UniformModel.query.all()
     return render_template('datalist.html',uniforms = uniforms)
  
- 
-@app.route('/<int:id>')
-def RetrieveSUniform(id):
-    uniforms = UniformModel.query.filter_by(id=id).first()
-    if uniforms:
-        return render_template('data.html', uniforms = uniforms)
-    return f"Uniform with id ={id} Doenst exist"
- 
- 
 @app.route('/<int:id>/edit',methods = ['GET','POST'])
 def update(id):
-    if request.method == 'POST'
-        
+    uniform = UniformModel.query.filter_by(id=id).first()
+
+    if request.method == 'POST':
         if uniform:
             db.session.delete(uniform)
             db.session.commit()
-            
-            
+
         dep_name = request.form['dep_name']
         course_name = request.form['course_name']
         type = request.form['type']
@@ -69,13 +60,13 @@ def update(id):
             course_name=course_name,
             type=type,
             stock=stock,
-            sizes = sizes
+            sizes=sizes
         )
-        
         db.session.add(uniform)
         db.session.commit()
         return redirect('/')
-
+        return f"Uniform with id = {id} Does nit exist"
+ 
     return render_template('update.html', uniform = uniform)
  
  
@@ -92,3 +83,4 @@ def delete(id):
     return render_template('delete.html')
  
 app.run(host='localhost', port=5000)
+

@@ -9,7 +9,7 @@
  
 {% block body %}
 <div class="container">
-<form action='' method = "POST">
+<form action='/' method = "POST">
 <table class="table">
     <tr>
         <td>Department Name</td>
@@ -22,7 +22,7 @@
     <tr>
         <td>Type</td>
         <td>
-        <select name="sizes" class="form-control" value="{{uniform.type}}">
+        <select name="sizes" class="form-control">
             <option value="a"
             {% if 'a' in uniform.type %}
             selected
@@ -54,7 +54,7 @@
     <tr>
         <td>Sizes</td>
         <td>
-        <select name="sizes" class="form-control" value="{{uniform.sizes}}">
+        <select name="sizes" class="form-control">
             <option value="small"
             {% if 'small' in uniform.sizes %}
             selected
