@@ -22,7 +22,7 @@
     <tr>
         <td>Type</td>
         <td>
-        <select name="sizes" class="form-control">
+        <select name="sizes" class="form-control" value="{{uniform.type}}">
             <option value="a"
             {% if 'a' in uniform.type %}
             selected
@@ -54,7 +54,7 @@
     <tr>
         <td>Sizes</td>
         <td>
-        <select name="sizes" class="form-control">
+        <select name="sizes" class="form-control" value="{{uniform.sizes}}">
             <option value="small"
             {% if 'small' in uniform.sizes %}
             selected
