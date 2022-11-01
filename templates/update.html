@@ -1,15 +1,9 @@
 {% extends 'base.html' %}
+
+{% block content %}
 {% include 'header.html' %}
- 
- 
- 
-{% block title %} Home {% endblock %}
- 
- 
- 
-{% block body %}
 <div class="container">
-<form action='/' method = "POST">
+<form action='' method = "POST">
 <table class="table">
     <tr>
         <td>Department Name</td>
@@ -91,6 +85,22 @@
   </form>
 
 </div>
-{% endblock %}
 
+<footer id="footer">
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>BAO Uniform</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  {% include 'script.html' %}
+  {% endblock %}
+  
 
+</body>
+
+</html>

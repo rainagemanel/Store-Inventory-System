@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'header.html' %}
+
+<div class="container">
+  <form action='' method = "POST">
+  <table class="table">
+      <tr>
+          <td>Department Name</td>
+          <td><input type = "text" name = "dep_name" class="form-control" /></td>
+      </tr>
+      <tr>
+          <td>Course Name</td>
+          <td><input type = "text" name = "course_name" class="form-control" /></td>
+      </tr>
+      <tr>
+          <td>Uniform Type</td>
+          <td>
+          <select name="type" class="form-control">
+              <option value="a">Type A</option>
+              <option value="b">Type B</option>
+              <option value="c">Type C</option>
+              <option value="d">Type D</option>
+           </select>
+          </td>
+      </tr>
+      
+      <tr>
+          <td>Stock</td>
+          <td><input type = "number" name = "stock" class="form-control" /></td>
+      </tr>
+  
+      <tr>
+          <td>Sizes</td>
+          <td>
+          <select name="sizes" class="form-control">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="extralarge">Extra Large</option>
+           </select>
+          </td>
+      </tr>
+      
+  
+      <tr>
+          <td colspan="2">
+              <input type="submit" name="submit" value="submit" class="btn btn-warning">
+          </td>
+         
+      </tr>
+  </table>
+    
+    </form>
+  
+  </div>
+  <div class="container footer-bottom clearfix">
+    <div class="copyright">
+      &copy; Copyright <strong><span>BAO Uniform</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+{% include 'script.html' %}
+{% endblock %}
+</body>
+
+</html>

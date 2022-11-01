@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
+
+{% block content %}
 {% include 'header.html' %}
- 
- 
- 
-{% block title %} Home {% endblock %}
- 
- 
- 
-{% block body %}
 <div class="container">
 <form action='' method="post">
     Click YES to confirm
     <input type = "submit" value="YES" class="btn btn-danger">
-    <a href='/'>Cancel</a>
+    <a href='/index'>Cancel</a>
 </form>
 </div>
+{% include 'script.html' %}
 {% endblock %}
+
+</body>
+
+</html>
