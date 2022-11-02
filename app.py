@@ -27,14 +27,18 @@ def login():
 
     return render_template('login.html')
 
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return render_template('login.html')
 
-@app.route("/index")
+@app.route('/index')
 def index():
     if g.user:
         return render_template('index.html',user=session['user'])
     return redirect(url_for('login'))
 
-@app.route("/about")
+@app.route('/about')
 def about():
     if g.user:
         return render_template('about.html',user=session['user'])
@@ -102,14 +106,13 @@ def update(id):
  
 @app.route('/<int:id>/delete', methods=['GET','POST'])
 def delete(id):
-
     uniforms = UniformModel.query.filter_by(id=id).first()
     if request.method == 'POST':
         if uniforms:
             db.session.delete(uniforms)
             db.session.commit()
-            return redirect('/index')
-            
+            return redirect('/datalist')
+     
     return render_template('delete.html')
  
 @app.before_request

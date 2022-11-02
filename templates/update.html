@@ -2,6 +2,19 @@
 
 {% block content %}
 {% include 'header.html' %}
+<br>
+  <br>
+  <br>
+  <br>
+  <div class="section-title">
+    <h2>Update Stock of Uniforms in BAO Inventory</h2>
+  </div>
+  <div class="col d-flex justify-content-center">
+    <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Update Uniforms</h5>
+      <br>
+      
 <div class="container">
 <form action='' method = "POST">
 <table class="table">
@@ -16,7 +29,7 @@
     <tr>
         <td>Type</td>
         <td>
-        <select name="sizes" class="form-control">
+        <select name="type" class="form-control">
             <option value="a"
             {% if 'a' in uniform.type %}
             selected
@@ -85,15 +98,17 @@
   </form>
 
 </div>
-
+</div>
+</div>
+</div>
+<br>
+  <br>
+  <br>
+  <br>
 <footer id="footer">
     <div class="container footer-bottom clearfix">
       <div class="copyright">
         &copy; Copyright <strong><span>BAO Uniform</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->

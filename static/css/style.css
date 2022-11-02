@@ -17,7 +17,14 @@ a {
   color: #313536;
   text-decoration: none;
 }
-
+.card {
+	width: 750px;
+	padding: 10px;
+	border: 2px solid #1569C7;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
 a:hover {
   color: whitesmoke;
   text-decoration: none;
@@ -118,9 +125,10 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
+  
   z-index: 997;
   padding: 15px 0;
+  background: black;
 }
 
 #header.header-scrolled,
