@@ -2,16 +2,34 @@
 
 {% block content %}
 {% include 'header.html' %}
+
+<br>
+<br>
+<br>
+<br>
+    <div class="section-title">
+      <h2>Delete Stock</h2>
+
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Are you sure, You want to delete this Uniform?</h5>
+          <br>
 <div class="container">
 <form action='' method="post">
     Click YES to confirm
+    <br>
+    <br>
     <input type = "submit" value="YES" class="btn btn-danger">
-    <a href='/index'>Cancel</a>
+    <a href='/datalist' class="btn btn-danger">Cancel</a>
 </form>
+</div>
+</div>
+</div>
 </div>
 {% include 'script.html' %}
 {% endblock %}
 
 </body>
-
 </html>
