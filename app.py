@@ -65,7 +65,7 @@ def create():
         )
         db.session.add(uniforms)
         db.session.commit()
-        return redirect('/index')
+        return redirect('/datalist')
     return redirect(url_for('login'))
  
 @app.route('/datalist')
@@ -99,7 +99,7 @@ def update(id):
         )
         db.session.add(uniform)
         db.session.commit()
-        return redirect('/index')
+        return redirect('/datalist')
  
     return render_template('update.html', uniform = uniform)
  
