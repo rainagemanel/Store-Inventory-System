@@ -1,4 +1,4 @@
-# Store-Inventory-System / BAO Office Uniform Inventory
+# Store-Inventory-System / BAO Uniform Inventory
 GROUP 2 - STORE INVENTORY SYSTEM 
 1. Gemanel, Raina V.
 2. Carandang, Christian
