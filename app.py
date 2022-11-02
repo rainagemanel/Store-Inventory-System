@@ -23,9 +23,9 @@ def login():
 
         if request.form['password'] == 'password':
             session['user'] = request.form['username']
-            return redirect(url_for('protected'))
+            return redirect(url_for('index'))
 
-    return render_template(login.html)
+    return render_template('login.html')
 
 
 @app.route("/index")
@@ -42,11 +42,8 @@ def about():
 
 @app.route('/create' , methods = ['GET','POST'])
 def create():
-    if g.user:
+    if g.user and request.method == 'GET':
         return render_template('create.html',user=session['user'])
-    
-    if request.method == 'GET':
-        return render_template('create.html')
  
     if request.method == 'POST':
         dep_name = request.form['dep_name']
@@ -73,7 +70,7 @@ def RetrieveList():
     if g.user:
         return render_template('datalist.html',user=session['user'],uniforms = uniforms)
     return redirect(url_for('login'))
-    
+
 @app.route('/<int:id>/edit', methods = ['GET','POST'])
 def update(id):
     uniform = UniformModel.query.filter_by(id=id).first()
@@ -115,6 +112,13 @@ def delete(id):
             
     return render_template('delete.html')
  
+@app.before_request
+def before_request():
+    g.user = None
+
+    if 'user' in session:
+        g.user = session['user']
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
 
