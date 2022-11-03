@@ -7,14 +7,27 @@
   <br>
   <br>
   <br>
-      <div class="section-title">
+      <div class="section-title" data-aos="fade-down">
         <h2>Inventory</h2>
         <h4>A complete list of items and goods in stock of BAO.</h4>
       </div>
-
-      <div class="container">
+      <div class="col d-flex justify-content-center">
+        <div class="card" data-aos="fade-left">
+        <div class="card-body">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" method="GET" type="search" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        <br>
+        <br>      
+      <div class="container" data-aos="fade-right">
         <table class="table">
-            <thead style="background-color: rgb(0, 0, 0);color: aliceblue;">
+            <thead style="background-color: rgb(0, 0, 0);color: #00ff3c;">
                <th>ID</th>
                <th>Department Name</th>
                <th>Course Name</th>

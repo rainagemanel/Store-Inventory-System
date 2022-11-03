@@ -8,6 +8,7 @@
     <title>BAO | Inventory</title>
 
     <link href="{{ url_for('static', filename='css/style2.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"/>
@@ -17,22 +18,21 @@
   </head>
 
   <body>
-
+    
     <div class="login-container"> 
       <div class="login-wrapper">     
         <div class="profile">
-          <img src="{{ url_for('static', filename='img/pro.png') }}" alt="" width="100" /> 
-          <p>BAO UNIFORM INVENTORY</p>
+          <img src="{{ url_for('static', filename='img/logo1.png') }}" alt="" width="100" /> 
+          <p class="name">BAO UNIFORM INVENTORY</p>
         </div>
         <form action="/" method="post">
         <div class="form-wrapper">
-          <p>Username</p>
+          <p>Admin Username</p>
           <input type="text" name="username" placeholder="Type your username" />
         </div>
         <div class="form-wrapper">
-          <p>Password</p>
+          <p>Admin Password</p>
           <input type="password" name="password" placeholder="Type your Password" />
-          <a href="" class="forgot-passowrd">Forgot Password?</a>
         </div>
         <div class="login-btn">
           <button type="submit">Login</button>
@@ -42,7 +42,7 @@
         </div>
     </form>
       </div>
-      
+      </div>
           </div>
     </div> 
   </body>

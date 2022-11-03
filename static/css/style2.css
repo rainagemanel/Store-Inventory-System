@@ -1,6 +1,6 @@
 body {
-    padding: 0px;
-    margin: 0px;
+    padding: 20px;
+    margin: auto;
     font-weight: normal;
     font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
@@ -24,24 +24,24 @@ body {
     
   }
   .login-container {
-    
-    height: 100vh;
-    width: 100vw;
+    margin: auto;
     display: flex;
-    justify-content: right;
-    align-items: right;
+    
+    
   }
-  
+  .name {
+    font-family: "Jost", sans-serif;
+  }
   .login-wrapper {
-    position: absolute;
-    right: 450px;
+    margin: auto;
     top: 25px;
     background-color: rgb(255, 255, 255);
     width: 27rem;
     height: 35rem;
     border-radius: 20px;
     padding: 15px;
-  
+	  border: 2px solid #00ff3c;
+    
   }
   
   .profile {
@@ -136,7 +136,7 @@ body {
     font-weight: 500;
     color: #000;
     background-color: #fff;
-    border: none;
+    border: 1px solid #00ff3c;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
@@ -145,9 +145,9 @@ body {
   }
   
   button:hover {
-    background-color: #23c483;
+    background-color: #00ff3c;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
+    color: rgb(0, 0, 0);
     transform: translateY(-7px);
   }
   
